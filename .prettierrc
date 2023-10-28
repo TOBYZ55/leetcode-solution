@@ -14,6 +14,7 @@
     "overrides": [
         {
             "files": [
+                "solution/0100-0199/0180.Consecutive Numbers/Solution.sql",
                 "solution/0500-0599/0550.Game Play Analysis IV/Solution.sql",
                 "solution/0500-0599/0578.Get Highest Answer Rate Question/Solution.sql",
                 "solution/0600-0699/0610.Triangle Judgement/Solution.sql",
@@ -37,6 +38,7 @@
                 "solution/1500-1599/1501.Countries You Can Safely Invest In/Solution.sql",
                 "solution/1500-1599/1511.Customer Order Frequency/Solution.sql",
                 "solution/1500-1599/1555.Bank Account Summary/Solution.sql",
+                "solution/1600-1699/1661.Average Time of Process per Machine/Solution.sql",
                 "solution/1600-1699/1667.Fix Names in a Table/Solution.sql",
                 "solution/1600-1699/1699.Number of Calls Between Two Persons/Solution.sql",
                 "solution/1700-1799/1777.Product's Price for Each Store/Solution.sql",

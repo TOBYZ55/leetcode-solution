@@ -74,7 +74,7 @@
 
 最后，我们返回 $left$ 即可。
 
-时间复杂度 $O(n \times \log M)$，空间复杂度 $O(1)$。其中 $n$ 和 $M$ 分别为绳子的数量和绳子的最大长度。
+时间复杂度 $O(n \times \log M)$，其中 $n$ 和 $M$ 分别为绳子的数量和绳子的最大长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
 
@@ -225,6 +225,33 @@ function maxLength(ribbons: number[], k: number): number {
         }
     }
     return left;
+}
+```
+
+### **Rust**
+
+```rust
+impl Solution {
+    pub fn max_length(ribbons: Vec<i32>, k: i32) -> i32 {
+        let mut left = 0i32;
+        let mut right = *ribbons.iter().max().unwrap();
+        while left < right {
+            let mid = (left + right + 1) / 2;
+            let mut cnt = 0i32;
+            for &entry in ribbons.iter() {
+                cnt += entry / mid;
+                if cnt >= k {
+                    break;
+                }
+            }
+            if cnt >= k {
+                left = mid;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return left;
+    }
 }
 ```
 
